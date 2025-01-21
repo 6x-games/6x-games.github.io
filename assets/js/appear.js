@@ -54,14 +54,14 @@ $(window).on('load', function () {
     (function() {
         var script = document.createElement('script');
         script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8L1MQ91YFD';
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-M97CMQ0H59';
         document.head.appendChild(script);
 
         script.onload = function() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-8L1MQ91YFD');
+            gtag('config', 'G-M97CMQ0H59');
         };
     })();
 
