@@ -1,24 +1,15 @@
-function loadGoogleAnalytics(id) {
-    // Google tag (gtag.js)
-    var firstScript= document.getElementsByTagName("script")[0];
-    newScript= document.createElement("script");
-    newScript.async= "";
-    newScript.src= "https://www.googletagmanager.com/gtag/js?id="+ id;
-    firstScript.parentNode.insertBefore(newScript, firstScript);
+// Load the gtag.js script asynchronously
+(function() {
+  var script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-M97CMQ0H59';
+  document.head.appendChild(script);
+})();
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', id);
+// Initialize Google Analytics
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
 }
-
-window.addEventListener("load", function() {
-    if (navigator.webdriver) {
-      console.log('Bot Browser');
-      loadGoogleAnalytics("G-LE1ZGTPC77");
-
-    } else {
-      console.log('Human Browser');
-      loadGoogleAnalytics("G-KFFPC3CBG0");
-    }
-});
+gtag('js', new Date());
+gtag('config', 'G-M97CMQ0H59');
